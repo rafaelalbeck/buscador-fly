@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buscador de Passagens</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Buscador de passagens</h1>
+      <p>Pesquise voos com preços reais em dinheiro.</p>
+    </section>
+
+    <section class="card">
+      <form id="searchForm" class="form">
+        <div class="grid">
+          <label>
+            Origem
+            <input id="origin" placeholder="Ex: GRU" maxlength="3" required />
+          </label>
+          <label>
+            Destino
+            <input id="destination" placeholder="Ex: GIG" maxlength="3" required />
+          </label>
+          <label>
+            Ida
+            <input id="departureDate" type="date" required />
+          </label>
+          <label>
+            Volta
+            <input id="returnDate" type="date" />
+          </label>
+          <label>
+            Adultos
+            <input id="adults" type="number" min="1" max="9" value="1" required />
+          </label>
+          <label>
+            Crianças
+            <input id="children" type="number" min="0" max="8" value="0" />
+          </label>
+        </div>
+        <button type="submit" id="submitBtn">Buscar passagens</button>
+      </form>
+      <p class="hint">Use códigos de aeroporto, por exemplo: GRU, CGH, GIG, SDU, BSB, FOR.</p>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="results" class="results"></section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
